@@ -160,8 +160,11 @@ elif kind_of_violation.upper() == "MATERIAL":
     elif severity_violation.upper() == "VERY SEVERE":
         min_fine = 12 * basic_value
         max_fine = 0.04 * worldwide_turnover
+        if max_fine <= 12000000:
+            max_fine == 12000000
         print("The minimum fine is:", min_fine)
         print("The maximum fine is:", max_fine)
         # Factor 12 < (max. 20 Mio. or 4% of annual turnover)
+    
     else:
         print("Invalid input.")

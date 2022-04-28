@@ -131,6 +131,8 @@ if kind_of_violation.upper() == "FORMAL":
     elif severity_violation.upper() == "VERY SEVERE":
         min_fine = 6 * basic_value
         max_fine = 0.02 * worldwide_turnover
+        if max_fine <= 10000000:
+            max_fine = 10000000
         print("The minimum fine is:", min_fine)
         print("The maximum fine is:", max_fine)
         # Factor 6 < (max: 10 Mio. or 2% of annual turnover)
